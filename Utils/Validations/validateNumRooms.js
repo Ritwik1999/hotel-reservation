@@ -1,5 +1,5 @@
 const isValidNumRooms = function(numRooms) {
-    if (typeof numRooms !== 'number') {
+    if (numRooms === NaN || typeof numRooms !== 'number') {
         return {
             valid: false,
             reason: 'numRooms not a number'
