@@ -31,4 +31,4 @@ for (let index = 0; index < numRooms; index++) {
     roomFixtures[index] = [];
 }
 
-prepBookings(mode, verdicts, roomFixtures, numRooms);
+prepBookings(verdicts, roomFixtures, numRooms);
