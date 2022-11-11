@@ -1,4 +1,4 @@
-const { roomVacant } = require('../Utils/roomBookingUtil');
+const { roomVacant } = require('../Utils/roomVacant');
 
 const roomBookings = [
     {

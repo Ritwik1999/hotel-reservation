@@ -1,4 +1,4 @@
-const { areOverlappingIntervals } = require('../Utils/overlappingIntervalsUtil');
+const { areOverlappingIntervals } = require('../Utils/overlappingIntervals');
 
 const nonOverlappingIntervals = [
     {
