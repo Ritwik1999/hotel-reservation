@@ -32,4 +32,11 @@ const isValidBooking = function({ startDate, endDate }) {
     };
 }
 
+const validateBookingProperties = function (bookings) {
+    return !bookings.some(booking => {
+        return !(booking.hasOwnProperty('startDate') && booking.hasOwnProperty('endDate'));
+    });
+}
+
 exports.isValidBooking = isValidBooking;
+exports.validateBookingProperties = validateBookingProperties;

@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 
 const { filePathQuestion } = require('./questions');
 const { processBookings } = require('../processBookings');
+const { validateBookingProperties } = require('../Validations/validateBooking');
 
 // receive input bookings
 let bookings = [];
@@ -11,6 +12,8 @@ const readFileContents = function (fileHandle, argv) {
     fileHandle.readFile({ encoding: 'utf8' })
         .then(dataJson => {
             bookings = JSON.parse(dataJson);
+            if (!validateBookingProperties(bookings))
+                throw new Error('Booking startDate/endDate not found in one or more bookings');
             processBookings(bookings, argv);
             fileHandle.close();
             return;
