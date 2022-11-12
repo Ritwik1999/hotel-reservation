@@ -3,6 +3,8 @@
 
 > A simple interactive command-line program to simulate a hotel reservation scenario, built using nodejs
 
+![Demo of the application in action.](./.README/demo.png)
+
 <a name="Prerequisites"></a>
 ## Prerequisites
 
