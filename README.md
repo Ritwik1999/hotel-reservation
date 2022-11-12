@@ -22,3 +22,5 @@ npm install
 ```bash
 node ./index.js --help
 ```
+
+### NOTE: For mode 2, the input file expected can be found at ```/data/bookings.json```
