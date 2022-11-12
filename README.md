@@ -24,5 +24,9 @@ npm install
 ```bash
 node ./index.js --help
 ```
+4. (Optionally) To run jest unit tests,
+```bash
+npm test
+```
 
 NOTE: For mode 2, the input file expected can be found at ```/data/bookings.json```
