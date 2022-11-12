@@ -12,7 +12,7 @@ Node js - LTS version preferred
 <a name="usage"></a>
 ## Usage
 
-1. Clone the repository/Download ZIP
+1. Clone the repository/Download ZIP & extract
 2. On a terminal of your choice, enter the following
 ```bash
 cd /path/to/the/folder
