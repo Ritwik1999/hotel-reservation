@@ -11,7 +11,7 @@ const printVerdicts = function (verdicts, bookings) {
         row.push(chalk.bold.blueBright(`Booking ${index+1}`));
         row.push(bookings[index].startDate);
         row.push(bookings[index].endDate);
-        if (verdicts[index].roomIndex) {
+        if (verdicts[index].reason === 'OK') {
             row.push(chalk.bold.greenBright(verdicts[index].status));
         } else {
             row.push(chalk.bold.redBright(verdicts[index].status));
