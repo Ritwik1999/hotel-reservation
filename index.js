@@ -16,8 +16,6 @@ if (!valid) {
     process.exit(1);
 }
 
-// TODO: add a debug option as well
-
 const mode = argv.mode;
 
 // Mode specific discourse
