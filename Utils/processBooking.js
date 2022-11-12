@@ -12,7 +12,7 @@ const processBooking = (booking, verdicts, roomFixtures, numRooms) => {
     let bookingAccepted = false;
     for (let index = 0; index < numRooms; index++) {
         if (roomVacant(roomFixtures[index], booking)) {
-            verdicts.push({ status: 'Accept', reason: 'OK' });
+            verdicts.push({ status: 'Accept', reason: 'OK', roomIndex: index });
             roomFixtures[index].push(booking);
             bookingAccepted = true;
             break;

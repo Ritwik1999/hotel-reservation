@@ -1,4 +1,5 @@
 const { processBooking } = require('./processBooking');
+const { declareVerdicts } = require('./Output/printVerdicts');
 
 // output variables
 const verdicts = [];
@@ -20,8 +21,9 @@ const processBookings = function (bookings, argv) {
     bookings.forEach(booking => {
         processBooking(booking, verdicts, roomFixtures, roomFixtures.length);
     });
-    console.log(verdicts);
-    console.log(roomFixtures);
+    
+    // Write output to terminal
+    declareVerdicts(verdicts, bookings);
 };
 
 exports.processBookings = processBookings;

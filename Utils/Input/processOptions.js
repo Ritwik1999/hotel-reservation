@@ -8,6 +8,10 @@ const argv = require('yargs/yargs')(process.argv.slice(2))
         describe: `Mode to run in: 1 for manual input, 2 for file input`,
         choices: [1, 2]
     })
+    .option('debug', {
+        alias: 'd',
+        describe: `Output debug logs to a csv file`
+    })
     .demandOption(['numRooms', 'mode'], 'Please provide numRooms and mode argument to work with this tool')
     .help()
     .argv;

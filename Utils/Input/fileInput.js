@@ -12,10 +12,12 @@ const readFileContents = function (fileHandle, argv) {
         .then(dataJson => {
             bookings = JSON.parse(dataJson);
             processBookings(bookings, argv);
+            fileHandle.close();
             return;
         })
         .catch(err => {
             console.error(err);
+            fileHandle.close();
             process.exit(1);
         });
 }
