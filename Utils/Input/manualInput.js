@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
+
 const { continueQuestion, reservationQuestions } = require('./questions');
+const { processBookings } = require('../processBookings');
 
 // receive input bookings
 const bookings = [];

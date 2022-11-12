@@ -17,7 +17,6 @@ if (!valid) {
 }
 
 // TODO: add a debug option as well
-// TODO; define the processQuestions method
 
 const mode = argv.mode;
 

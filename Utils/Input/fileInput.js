@@ -1,12 +1,13 @@
-const { open, readFile } = require('node:fs/promises');
-
+const { open } = require('node:fs/promises');
 const inquirer = require('inquirer');
+
 const { filePathQuestion } = require('./questions');
+const { processBookings } = require('../processBookings');
 
 // receive input bookings
 let bookings = [];
 
-const readFileContents = function (fileHandle) {
+const readFileContents = function (fileHandle, argv) {
     fileHandle.readFile({ encoding: 'utf8' })
         .then(dataJson => {
             bookings = JSON.parse(dataJson);
@@ -19,11 +20,11 @@ const readFileContents = function (fileHandle) {
         });
 }
 
-const accessFilePath = function (filePath) {
+const accessFilePath = function (filePath, argv) {
     try {
         open(filePath, 'r')
             .then((fileHandle) => {
-                readFileContents(fileHandle);
+                readFileContents(fileHandle, argv);
             })
             .catch(err => {
                 throw new Error(err);
@@ -38,7 +39,7 @@ const askFilePathQuestion = function(argv) {
     inquirer
         .prompt(filePathQuestion)
         .then(answer => {
-            accessFilePath(answer.filePath);
+            accessFilePath(answer.filePath, argv);
         })
         .catch(err => {
             console.error('Issue processing your input: ', err``);
